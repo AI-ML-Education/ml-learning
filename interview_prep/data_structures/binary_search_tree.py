@@ -12,13 +12,12 @@ class BinarySearchTree:
             self.value = value
             self.left = None
             self.right = None
-    
+
     def __init__(self):
         self.root = None
-    
+
     def insert(self, value):
         if not self.root:
             self.root = self.Node(value)
         else:
             self._insert_recursive(self.root, value)
-            

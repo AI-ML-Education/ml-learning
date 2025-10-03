@@ -31,7 +31,7 @@ class PyList:
     """
     def __init__(self, iterable=[]):
         self.items = list(iterable)
-    
+
     def append(self, item):
         self.items.append(item)
     
