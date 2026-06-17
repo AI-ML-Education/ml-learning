@@ -1,5 +1,42 @@
 ###############################################
 #                                             #
+#                   PYTHON                    #
+#                                             #
+###############################################
+
+"""
+A few habits are important to develop (and a few to avoid) when solving problems in Python:
+
+- Think twice if list is the right data structure because habitually we tend to reach for lists first. 
+  - Consider if a set, dict, or heap would be more efficient.
+  - Especially if a membership check is needed, a set or dict is O(1) while list is O(n).
+
+- When loops are needed also consider while loops and not just for loops.
+  - We often are habitual to use for loops but while loops can be more flexible in certain scenarios, 
+    - such as when the number of iterations is not known in advance or 
+    - when we need to modify the loop variable in non-linear ways.
+
+- Think security on user input:
+  - Avoid eval() and exec() on user input as they can execute arbitrary code.
+  - Use try-except blocks to handle potential exceptions from user input.
+  - Validate and sanitize input to ensure it meets expected formats and types.
+
+- Avoid dict/list comprehensions for complex logic:
+  - For complex logic, it's easier to write code without getting lost in the syntax of comprehensions.
+  - Use regular loops and conditionals for clarity when the logic is not straightforward.
+
+- Develop a habit to think of edge cases and possible test cases.
+  - Edge case often help to uncover bugs and ensure the robustness of the solution.
+    - Consider empty inputs, very large inputs, inputs with duplicates, and inputs that might cause errors (like null values or invalid formats).
+  - Edge cases also help to write test cases that can validate the correctness of the solution and ensure it handles all scenarios gracefully.
+  - Use a few normal test cases to validate the basic functionality, and then use edge cases to test the boundaries and potential failure points of the code.
+
+"""
+
+
+
+###############################################
+#                                             #
 #          DICTIONARY / DEFAULTDICT           #
 #                                             #
 ###############################################
