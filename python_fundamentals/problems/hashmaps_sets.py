@@ -9,29 +9,25 @@ Sets, on the other hand, are unordered collections of unique elements. They are 
 To practice these concepts, we will implement a few problems that involve hashmaps and sets. These problems will help solidify your understanding of how to use these data structures effectively in Python. We will also reason about why hashmaps and sets are useful in certain scenarios, and how they can be leveraged to solve real-world problems efficiently.
 """
 
-# Two Sum Problem
+# Two Sum Problem (dictionary practice)
 # Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+#
+# Focus here: practicing the dictionary technique itself.
+# We map each value -> its index as we scan. For each number we ask "have I
+# already seen its complement?" A dict makes that lookup O(1), turning the
+# naive O(n^2) scan into a single O(n) pass.
+# (The full O(n^2) -> O(n) progression lives in coding_practice/patterns/01_hashmap.py.)
 
 # %%
 def two_sum(nums, target):
-    for num1_i, num1 in enumerate(nums):
-        num2 = target - num1
-        if num2 in nums:
-            return num1_i, nums.index(num2)
-
-#two_sum([2, 4, 5, 6, 10, 12], 11)
-
-
-def two_sum_v2(nums, target):
-    seen = []
+    seen = {}                      # value -> index
     for i, num in enumerate(nums):
         comp = target - num
-        if seen:
-            if comp in seen:
-                return i, seen.index(comp)
-        seen.append(num)
-            
-two_sum_v2([2, 4, 5, 6, 10, 12], 11)
+        if comp in seen:           # O(1) membership test on the dict's keys
+            return seen[comp], i
+        seen[num] = i              # record only after checking, so we never reuse an element
+
+two_sum([2, 4, 5, 6, 10, 12], 11)
 
 # %%
 

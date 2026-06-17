@@ -96,7 +96,7 @@ def longest_logged_in(logs):
     if action == 'logout':
       start_time = login_times.pop(uid) # sort guarantees a login_item and pop also removes it.
       durations[uid] += time - start_time
-   return max(durations, key=durations.get)
+  return max(durations, key=durations.get)
 
 # Complexity:
 # Time: O(n logn) due to sorting
@@ -791,19 +791,19 @@ class TaskQueue:
   def __init__(self):
     self.queue = {}
 
- def add_task(self, name, priority) -> None:
+  def add_task(self, name, priority) -> None:
    self.queue[name] = Task(name, priority)
 
- def complete_task(self, name):
+  def complete_task(self, name):
    self.queue[name].status = 'complete' 
 
- def get_next_task(self):
+  def get_next_task(self):
    if self.queue:    # max() throws an error on empty iterable
      return max(self.queue, key=lambda x: self.queue[x].priority)
    else:
      return None
 
- def get_all_pending(self):
+  def get_all_pending(self):
    pending_tasks = {name: task for name, task in self.queue.items() if task.status == 'pending'}
    return sorted(pending_tasks.values(), key=lambda x: -x.priority)
 
