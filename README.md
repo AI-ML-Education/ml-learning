@@ -20,12 +20,13 @@ One home for all coding/DSA practice.
 
 - `patterns/` — core interview patterns, numbered for ordered practice:
   `01_hashmap.py`, `02_sliding_window.py`, `03_prefix_sums.py`, `04_two_pointers.py`,
-  `05_intervals.py`, `06_stacks.py`, `07_greedy_binarysearch.py`, `08_heaps.py`,
+  `05_intervals.py`, `06_stacks.py`, `07_greedy_binary_search.py`, `08_heaps.py`,
   `09_graphs.py`, `10_dp.py`
-  - `linear_data_structure/` — binary search, sliding window, two pointers.
-  - `non_linear_data_structure/` — backtracking, BFS, DFS, dynamic programming,
+  - `linear_data_structures/` — binary search, sliding window, two pointers.
+  - `non_linear_data_structures/` — backtracking, BFS, DFS, dynamic programming,
     priority queue.
-- `data_structures/` — binary search tree, binary tree, and general data structures.
+- `data_structures/` — binary search tree, binary tree, and an `overview.py` catalog
+  of Python data structures.
 
 ### `ml/`
 Machine learning foundations and LLM internals.
@@ -49,7 +50,7 @@ Experiments with agent frameworks.
 ### `system_design/`
 System design practice.
 
-- `system_design_fde_practice.py`
+- `fde_practice.py`
 
 ## Getting started
 
