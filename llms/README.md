@@ -12,7 +12,7 @@ Loosely follows Sebastian Raschka's *Build a Large Language Model (From Scratch)
 ### Foundations (math & building blocks — read first, or dip in as needed)
 - [layers.ipynb](layers.ipynb) — what a "layer" really is: neurons, `nn.Linear`, and how they stack.
 - [backprop_gradient_descent.ipynb](backprop_gradient_descent.ipynb) — manual forward/backward through an MLP, with a gradient check against autograd.
-- [logistic_sigmoid_cross_entropy_maximization.ipynb](logistic_sigmoid_cross_entropy_maximization.ipynb) — sigmoid → maximum likelihood → cross-entropy, plus the PyTorch loss cheatsheet.
+- [sigmoid_to_cross_entropy.ipynb](sigmoid_to_cross_entropy.ipynb) — sigmoid → maximum likelihood → cross-entropy, plus the PyTorch loss cheatsheet.
 - [tokenization_bpe_and_wordpiece_encoding.ipynb](tokenization_bpe_and_wordpiece_encoding.ipynb) — Byte-Pair Encoding and WordPiece built from scratch.
 - [basics_llm.ipynb](basics_llm.ipynb) — the big picture: the components of an LLM and how they map to the code we build below.
 
@@ -21,7 +21,7 @@ Numbered by where each piece sits in the architecture / training lifecycle:
 1. [01_data_prep.ipynb](01_data_prep.ipynb) — text → tokens → vocab/BPE → input–target batches with a `DataLoader`.
 2. [02_attention.ipynb](02_attention.ipynb) — self-attention → causal masking → multi-head attention.
 3. [03_transformer_block.ipynb](03_transformer_block.ipynb) — LayerNorm, GELU feed-forward, residual connections, the transformer block, the full `GPTModel`, and greedy text generation.
-   - [shape_tracing.ipynb](shape_tracing.ipynb) — *companion to step 3*: trace tensor shapes end-to-end through the model.
+   - [03b_shape_tracing.ipynb](03b_shape_tracing.ipynb) — *companion to step 3*: trace tensor shapes end-to-end through the model.
 4. [04_pretraining.ipynb](04_pretraining.ipynb) — the training loop on real text: LM cross-entropy, train/val loss, sampling during training, checkpoints. *(Stub — planned build-out, Raschka ch. 5.)*
 5. [05_decoding.ipynb](05_decoding.ipynb) — decoding strategies: greedy, temperature scaling, and top-k sampling.
 6. [06_finetuning_classification.ipynb](06_finetuning_classification.ipynb) — fine-tune the GPT into a spam classifier.

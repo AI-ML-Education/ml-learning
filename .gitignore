@@ -217,4 +217,5 @@ __pycache__/
 llms/sms_spam_collection.zip
 llms/loss-plot.pdf
 llms/temperature-plot.pdf
+llms/assets/
 data/spam_classification/
