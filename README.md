@@ -33,7 +33,21 @@ Machine learning foundations and LLM internals.
 
 - `llm_fundamentals/` — a guided walk through how LLMs work, from tokenization and
   attention to KV cache, sampling, LoRA/QLoRA, training mechanics, and evaluation.
+  These are the **narrated theory** (runnable `.py` lessons); the **hands-on build**
+  of the same ideas lives in `llms/`.
 - `data_science/` — math and ML foundations (e.g. `linear_regression_math.py`).
+
+### `llms/`
+Hands-on "build a GPT from scratch" in notebooks — I tear the architecture down and
+re-implement each piece (tokenization, attention, the transformer block, the full
+`GPTModel`, decoding, and classification fine-tuning). Foundation notebooks cover the
+supporting math (layers, backprop, cross-entropy). Shared code lives in `llms/utils/`.
+See [`llms/README.md`](llms/README.md) for the suggested reading order.
+
+### `pytorch/`
+PyTorch basics and warm-ups.
+
+- `intro_to_pytorch.ipynb` — tensors, autograd, and the core PyTorch workflow.
 
 ### `rl/`
 Reinforcement learning from scratch — the full ladder from tabular methods to the

@@ -212,3 +212,9 @@ __pycache__/
 .ipynb_checkpoints/
 .vscode/
 .DS_Store
+
+# llms/ generated & downloaded artifacts (the notebooks recreate these on run)
+llms/sms_spam_collection.zip
+llms/loss-plot.pdf
+llms/temperature-plot.pdf
+data/spam_classification/
