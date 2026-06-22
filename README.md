@@ -35,6 +35,54 @@ Machine learning foundations and LLM internals.
   attention to KV cache, sampling, LoRA/QLoRA, training mechanics, and evaluation.
 - `data_science/` — math and ML foundations (e.g. `linear_regression_math.py`).
 
+### `rl/`
+Reinforcement learning from scratch — the full ladder from tabular methods to the
+frontier techniques that align large language models. Files 00–05 (and 12–13) are
+pure NumPy (no gym, no torch); the deep-RL files (06–18) use PyTorch. Each file is a
+self-contained lesson with explanation plus runnable code; run any directly to watch
+the algorithm learn. Shared helpers live in `_environments.py` (CartPole, PointMass,
+bandit, Tic-Tac-Toe) and `_toy_llm.py` (a tiny autoregressive LM for the RLHF files).
+
+Classical / tabular (pure NumPy, on a small GridWorld):
+- `00_rl_system_overview.py` — the agent–environment loop, return/discounting, and a
+  map of RL methods.
+- `01_markov_decision_processes.py` — the MDP formalism and a reusable `GridWorld`
+  environment (deterministic or "icy"/stochastic).
+- `02_value_functions_and_bellman.py` — V/Q value functions and the Bellman
+  expectation & optimality equations.
+- `03_dynamic_programming.py` — policy evaluation, policy iteration, and value
+  iteration (the model-based ground truth).
+- `04_monte_carlo_methods.py` — learning from complete episodes (MC prediction and
+  ε-greedy MC control), no model required.
+- `05_temporal_difference_learning.py` — TD(0), SARSA (on-policy), and Q-learning
+  (off-policy) — the workhorses of model-free RL.
+
+Deep RL (PyTorch):
+- `06_function_approximation.py` — from tables to features and neural nets (linear
+  semi-gradient TD and an MLP value approximator).
+- `07_deep_q_networks.py` — DQN with replay buffer, target network, and Double DQN
+  on CartPole.
+- `08_policy_gradients.py` — REINFORCE with reward-to-go and a value baseline.
+- `09_actor_critic.py` — A2C with Generalized Advantage Estimation (GAE).
+- `10_trpo_ppo.py` — the clipped-surrogate PPO objective (and the TRPO idea behind it).
+- `11_continuous_control.py` — DDPG on a continuous task, with TD3/SAC explained.
+- `12_exploration_offline_rl.py` — bandit exploration (ε-greedy, UCB, Thompson) and
+  offline RL (behavior cloning vs. offline Q-learning).
+- `13_planning_dyna_mcts.py` — model-based planning: Dyna-Q and Monte Carlo Tree
+  Search (UCT) on Tic-Tac-Toe.
+
+Frontier: self-play and LLM alignment (PyTorch):
+- `14_alphazero_muzero.py` — AlphaZero self-play (PUCT MCTS + policy/value net) on
+  Tic-Tac-Toe, with MuZero explained.
+- `15_rlhf_pipeline.py` — the RLHF recipe end-to-end: SFT → reward model → RL
+  fine-tuning, with the KL-vs-reward trade-off swept.
+- `16_ppo_for_llms.py` — text generation as a token-level MDP; PPO with a value head,
+  per-token KL penalty, and GAE.
+- `17_dpo_ipo_kto.py` — DPO (and IPO) preference optimization with no reward model
+  and no RL loop; KTO explained.
+- `18_grpo_rlaif_reasoning.py` — GRPO (critic-free, behind DeepSeek-R1), RLAIF, and
+  reasoning RL — plus why AlphaFold is *not* reinforcement learning.
+
 ### `python_fundamentals/`
 Python refreshers and hands-on practice.
 
