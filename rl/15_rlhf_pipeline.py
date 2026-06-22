@@ -10,7 +10,7 @@ WHAT THIS FILE COVERS
     the toy language model from `_toy_llm.py`.
 
 WHY RL AT ALL FOR LANGUAGE MODELS?
-    A pretrained LM (files in ml/llm_fundamentals/) only knows P(next token | text).
+    A pretrained LM (built in llms/) only knows P(next token | text).
     "Be helpful, honest, harmless" is not a next-token label — there is no dataset
     of "the single correct response". Instead humans can COMPARE two responses and
     say which is better. RLHF turns those comparisons into a reward signal and

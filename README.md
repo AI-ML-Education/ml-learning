@@ -29,19 +29,18 @@ One home for all coding/DSA practice.
   of Python data structures.
 
 ### `ml/`
-Machine learning foundations and LLM internals.
+Machine learning foundations.
 
-- `llm_fundamentals/` — a guided walk through how LLMs work, from tokenization and
-  attention to KV cache, sampling, LoRA/QLoRA, training mechanics, and evaluation.
-  These are the **narrated theory** (runnable `.py` lessons); the **hands-on build**
-  of the same ideas lives in `llms/`.
 - `data_science/` — math and ML foundations (e.g. `linear_regression_math.py`).
 
 ### `llms/`
-Hands-on "build a GPT from scratch" in notebooks — I tear the architecture down and
-re-implement each piece (tokenization, attention, the transformer block, the full
-`GPTModel`, decoding, and classification fine-tuning). Foundation notebooks cover the
-supporting math (layers, backprop, cross-entropy). Shared code lives in `llms/utils/`.
+Everything LLM, in one place — a hands-on "build a GPT from scratch" track plus the
+supporting theory. The numbered notebooks tear the architecture down and re-implement
+each piece (tokenization, attention, the transformer block, the full `GPTModel`,
+decoding, classification fine-tuning); `llms/theory/` holds the narrated `.py` lessons
+(system overview, architectures, training mechanics, evaluation, determinism, …), and
+`llms/tbd/` holds theory seeds queued to grow into notebooks (KV cache, LoRA/QLoRA,
+positional encodings, evaluation). Shared code lives in `llms/utils/`.
 See [`llms/README.md`](llms/README.md) for the suggested reading order.
 
 ### `pytorch/`

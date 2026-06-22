@@ -1,9 +1,9 @@
 # llms/
 
 Hands-on **"build a GPT from scratch"** track — I tear the architecture down and
-re-implement each piece myself so I actually understand it. The notebooks here are
-the practical companion to the narrated theory in [`../ml/llm_fundamentals/`](../ml/llm_fundamentals)
-(which explains the same ideas as runnable `.py` lessons).
+re-implement each piece myself so I actually understand it. Narrated theory lessons
+that back up the build live alongside, in [`theory/`](theory) (reading) and
+[`tbd/`](tbd) (theory seeds queued to become notebooks).
 
 Loosely follows Sebastian Raschka's *Build a Large Language Model (From Scratch)*.
 
@@ -33,10 +33,23 @@ Reusable pieces extracted from the notebooks so later notebooks just import them
 
 > Imports are written as `from utils import ...`, so run the notebooks **with `llms/` as the working directory**.
 
+## Theory — [`theory/`](theory)
+Narrated `.py` lessons for the concepts that sit *around* the build (read as needed):
+- `theory/llm_system_overview.py` — the end-to-end pipeline at a glance.
+- `theory/llm_architecture.py` — how decoder-only GPTs compare to RNN/CNN/seq2seq.
+- `theory/modeling_in_llms.py` — training objectives: causal LM, masked LM, seq2seq, span corruption.
+- `theory/training_mechanics_and_efficiency.py` — AdamW, LR schedules, grad clipping, mixed precision, checkpointing (reference for [04_pretraining.ipynb](04_pretraining.ipynb)).
+- `theory/determinism_and_non_determinism.py` — reproducibility, seeds, float non-associativity.
+- `theory/putting_it_all_together.py` — a unified TinyGPT blueprint tying the pieces together.
+
 ## Roadmap — [`tbd/`](tbd)
-Planned deep-dives (stubs for now): LoRA, ViT, adapters, benchmarks, pruning,
-quantization, reasoning, and RL for LLMs. Note that `rl/14`–`rl/18` already cover
-much of the RL-for-LLMs material.
+Theory seeds (`.py`) and stubs queued to grow into hands-on notebooks:
+- `tbd/kv_cache.py` — key/value caching for fast inference (no notebook yet).
+- `tbd/positional_information.py` — sinusoidal / learned / RoPE encodings.
+- `tbd/lora_and_qlora.py` (+ `lora_basics.ipynb`) — parameter-efficient fine-tuning.
+- `tbd/evaluation.py` (+ `llm_benchmarks.ipynb`) — perplexity, BLEU/ROUGE/BERTScore, task metrics.
+- Other stubs: ViT, adapters, pruning, quantization, reasoning, RL for LLMs.
+  Note that `rl/14`–`rl/18` already cover much of the RL-for-LLMs material.
 
 ## Notes
 - Generated/downloaded artifacts (the spam dataset zip, extracted data under
