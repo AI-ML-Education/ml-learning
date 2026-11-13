@@ -93,6 +93,7 @@ six==1.17.0
 soupsieve==2.8.3
 stack-data==0.6.3
 terminado==0.18.1
+tiktoken==0.14.0
 tinycss2==1.4.0
 torch==2.12.1
 tornado==6.5.5

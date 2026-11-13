@@ -219,3 +219,4 @@ llms/loss-plot.pdf
 llms/temperature-plot.pdf
 llms/assets/
 data/spam_classification/
+data/TheVerdict/

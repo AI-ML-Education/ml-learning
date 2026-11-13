@@ -22,7 +22,7 @@ Numbered by where each piece sits in the architecture / training lifecycle:
 2. [02_attention.ipynb](02_attention.ipynb) — self-attention → causal masking → multi-head attention.
 3. [03_transformer_block.ipynb](03_transformer_block.ipynb) — LayerNorm, GELU feed-forward, residual connections, the transformer block, the full `GPTModel`, and greedy text generation.
    - [03b_shape_tracing.ipynb](03b_shape_tracing.ipynb) — *companion to step 3*: trace tensor shapes end-to-end through the model.
-4. [04_pretraining.ipynb](04_pretraining.ipynb) — the training loop on real text: LM cross-entropy, train/val loss, sampling during training, checkpoints. *(Stub — planned build-out, Raschka ch. 5.)*
+4. [04_pretraining.ipynb](04_pretraining.ipynb) — the training loop on real text: LM cross-entropy, train/val loss, sampling during training, checkpoints. Pretrains the from-scratch GPT on *The Verdict* and shows overfitting on a tiny corpus.
 5. [05_decoding.ipynb](05_decoding.ipynb) — decoding strategies: greedy, temperature scaling, and top-k sampling.
 6. [06_finetuning_classification.ipynb](06_finetuning_classification.ipynb) — fine-tune the GPT into a spam classifier.
 
